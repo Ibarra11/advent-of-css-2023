@@ -12,6 +12,18 @@ export default defineConfig({
     createSvgIconsPlugin({
       // Specify the icon folder to be cached
       iconDirs: [path.resolve(process.cwd(), "src/assets/icons")],
+      svgoOptions: {
+        plugins: [
+          {
+            name: "removeAttrs",
+            params: { attrs: ["fill", "fill-rule", "color-rule", "clip-rule"] },
+          },
+          {
+            name: "addAttributesToSVGElement",
+            params: { attribute: { fill: "currentColor" } },
+          },
+        ],
+      },
       // Specify symbolId format
       symbolId: "icon-[name]",
     }),
