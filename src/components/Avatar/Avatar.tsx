@@ -4,14 +4,8 @@ import { twMerge } from "tailwind-merge";
 const avatarVariants = cva(["block, rounded-full"], {
   variants: {
     size: {
-      sm: {
-        avatarContainer: "p-0.5",
-        avatar: "w-12 h-12",
-      },
-      md: {
-        avatarContainer: "p-1",
-        avatar: "w-16 h-16",
-      },
+      sm: "w-12 h-12",
+      md: "w-16 h-16",
     },
   },
 });
