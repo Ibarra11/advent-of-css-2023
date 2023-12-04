@@ -8,7 +8,7 @@ function App() {
     <div className="min-h-screen grid place-content-center bg-slate-600">
       <div className=" w-96">
         <form onSubmit={(e) => e.preventDefault()}>
-          <Input label="Email" type="email" />
+          <Input label="Password" type="password" />
         </form>
       </div>
     </div>
