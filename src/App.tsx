@@ -1,15 +1,14 @@
-import AvatarWithSantaHat from "./components/Avatar/AvatarWithSantaHat";
-import AvatarWithStatus from "./components/Avatar/AvatarWithStatus";
-import Icon from "./components/Icon/Icon";
 import Input from "./components/Input/Input";
 
 function App() {
   return (
-    <div className="min-h-screen grid place-content-center bg-slate-600">
-      <div className=" w-96">
-        <form onSubmit={(e) => e.preventDefault()}>
-          <Input label="Password" type="password" />
-        </form>
+    <div className="min-h-screen bg-authHero bg-no-repeat bg-cover bg-silverTree py-12">
+      <div className="flex flex-col justify-center max-w-xl w-full mx-auto">
+        <img
+          className="w-[460px] h-[249px] mx-auto"
+          alt="secret santa logo"
+          src="/logo__secret-santa.svg"
+        />
       </div>
     </div>
   );

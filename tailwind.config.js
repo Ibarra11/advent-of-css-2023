@@ -23,6 +23,9 @@ export default {
         padua: "#b1e3cc",
         vistaBlue: "#94d1b4",
       },
+      backgroundImage: {
+        authHero: "url(../bg__auth.svg)",
+      },
     },
     fontFamily: {
       condensed: ["Bebas Neue", "sans-serif"],

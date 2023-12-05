@@ -19,7 +19,6 @@ export default function Input({
     "idle"
   );
   const [isPasswordVisible, setIsPasswordVisible] = React.useState(false);
-  const [value, setValue] = React.useState("");
 
   React.useEffect(() => {
     if (inputRef.current) {
@@ -57,7 +56,6 @@ export default function Input({
           if (status === "error" && inputRef.current?.validity.valid) {
             setStatus("active");
           }
-          setValue(e.target.value);
         }}
         type={type !== "password" ? type : isPasswordVisible ? "text" : type}
         {...props}
@@ -73,7 +71,7 @@ export default function Input({
       >
         {label}
       </label>
-      {type === "password" && status !== "idle" && value.length > 0 && (
+      {type === "password" && (
         <button
           onClick={() => setIsPasswordVisible(!isPasswordVisible)}
           className="absolute top-1/2 -translate-y-1/2 right-4 text-blackPearl"
