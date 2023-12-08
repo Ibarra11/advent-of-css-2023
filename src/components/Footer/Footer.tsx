@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="fixed -z-10 bottom-0 w-full h-[340px] bg-spicyMustard pt-20 pb-12 grid place-content-center gap-14">
+    <footer className="fixed -z-10 bottom-0 w-full h-[340px] bg-acadia dark:bg-blackPearl pt-20 pb-12 grid place-content-center gap-14">
       <img
         className="mx-auto"
         src="/logo__secret-santa--small.svg "

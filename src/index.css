@@ -3,3 +3,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  /* hamburger */
+  input[type="checkbox"] + button {
+  }
+  /* x */
+  input[type="checkbox"]:checked + button {
+  }
+}
