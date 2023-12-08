@@ -24,7 +24,7 @@ export default {
         vistaBlue: "#94d1b4",
       },
       backgroundImage: {
-        authHero: "url(../bg__auth.svg)",
+        auth: "url(../bg__auth.svg)",
       },
     },
     fontFamily: {
