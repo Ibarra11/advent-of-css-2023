@@ -1,9 +1,4 @@
-import React from "react";
-export default function HamburgerMenu() {
-  const [isOpen, setIsOpen] = React.useState(false);
-  function toggleMenu() {
-    setIsOpen(!isOpen);
-  }
+export default function HamburgerMenu({ toggleMenu, isOpen }) {
   return (
     <button
       className="relative h-[58px] w-[68px] flex flex-col items-center justify-center bg-supernova "

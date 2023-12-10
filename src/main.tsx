@@ -5,6 +5,7 @@ import "virtual:svg-icons-register";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "./components/Login/Login.tsx";
 import AuthLayout from "./components/layouts/Auth.tsx";
+import Dashboard from "./components/layouts/Dashboard.tsx";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
         element: <Login />,
       },
     ],
+  },
+  {
+    path: "/",
+    element: <Dashboard />,
   },
 ]);
 

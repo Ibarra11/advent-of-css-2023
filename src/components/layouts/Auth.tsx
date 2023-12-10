@@ -1,15 +1,13 @@
 import { Outlet } from "react-router-dom";
 import { useMatches } from "react-router-dom";
 import Footer from "../Footer/Footer";
-import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
+
 export default function AuthLayout() {
   const matchData = useMatches();
   return (
     <>
       <main className="relative  min-h-screen bg-auth bg-no-repeat bg-cover bg-[center_top] bg-silverTree py-12 dark:bg-nileBlue mb-[340px]">
-        <div className="flex justify-center">
-          <HamburgerMenu />
-        </div>
+        <div className="flex justify-center"></div>
 
         {/* <div className="flex flex-col justify-center max-w-xl w-full mx-auto">
           <img
