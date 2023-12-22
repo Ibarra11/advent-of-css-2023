@@ -22,6 +22,7 @@ const avatarContianerVariants = cva(["relative bg-white w-fit rounded-full"], {
 export interface AvatarProps extends VariantProps<typeof avatarVariants> {
   src: string;
   className?: string;
+  alt?: string;
 }
 
 export const Avatar: React.FC<React.PropsWithChildren<AvatarProps>> = ({
@@ -29,10 +30,15 @@ export const Avatar: React.FC<React.PropsWithChildren<AvatarProps>> = ({
   size,
   className,
   children,
+  alt = "User Avatar",
 }) => {
   return (
     <div className={avatarContianerVariants({ size })}>
-      <img src={src} className={twMerge(className, avatarVariants({ size }))} />
+      <img
+        alt={alt}
+        src={src}
+        className={twMerge(className, avatarVariants({ size }))}
+      />
       {children}
     </div>
   );

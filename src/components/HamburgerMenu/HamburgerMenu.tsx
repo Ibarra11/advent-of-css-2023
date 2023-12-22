@@ -1,12 +1,18 @@
-export default function HamburgerMenu({ toggleMenu, isOpen }) {
+export default function HamburgerMenu({
+  toggleMenu,
+  isOpen,
+}: {
+  toggleMenu: () => void;
+  isOpen: boolean;
+}) {
   return (
     <button
-      className="relative h-[58px] w-[68px] flex flex-col items-center justify-center bg-supernova "
+      className="h-[58px] w-[68px] flex flex-col items-center justify-center bg-supernova "
       onClick={toggleMenu}
     >
       <div
-        className={`bg-black h-[3px] w-12 absolute -translate-y-3 transition-transform ${
-          isOpen ? "translate-y-0 rotate-45" : ""
+        className={`bg-black h-[3px] w-12 absolute  transition-transform ${
+          isOpen ? "translate-y-0 rotate-45" : "-translate-y-3"
         }`}
       ></div>
       <div
@@ -15,8 +21,8 @@ export default function HamburgerMenu({ toggleMenu, isOpen }) {
         }`}
       ></div>
       <div
-        className={`bg-black h-[3px] w-12 absolute translate-y-3 transition-transform ${
-          isOpen ? "translate-y-0 -rotate-45" : ""
+        className={`bg-black h-[3px] w-12 absolute  transition-transform ${
+          isOpen ? "translate-y-0 -rotate-45" : " translate-y-3"
         }`}
       ></div>
     </button>

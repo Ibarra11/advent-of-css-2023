@@ -25,6 +25,7 @@ export default {
       },
       backgroundImage: {
         auth: "url(../bg__auth.svg)",
+        dashboard: "url(./bg__interior.svg)",
       },
     },
     fontFamily: {

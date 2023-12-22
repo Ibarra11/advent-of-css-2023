@@ -25,7 +25,7 @@ export default function Dropdown({ handleClose }: { handleClose: () => void }) {
     };
   }, [handleClose]);
   return (
-    <div
+    <nav
       ref={ref}
       className="absolute top-full translate-y-[18px] left-3 right-0 px-4 py-5 bg-white"
     >
@@ -50,6 +50,6 @@ export default function Dropdown({ handleClose }: { handleClose: () => void }) {
           </Link>
         </li>
       </ul>
-    </div>
+    </nav>
   );
 }
