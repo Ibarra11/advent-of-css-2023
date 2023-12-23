@@ -1,6 +1,7 @@
 import { Link, Outlet } from "react-router-dom";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
+import Checkbox from "../components/Checkbox/Checkbox";
 
 export default function Dashboard() {
   return (
@@ -14,7 +15,8 @@ export default function Dashboard() {
             alt="Secret Santa"
           />
         </Link>
-        <Outlet />
+        <Checkbox>Send out a remainder before event</Checkbox>
+        {/* <Outlet /> */}
       </main>
       <Footer />
     </div>
