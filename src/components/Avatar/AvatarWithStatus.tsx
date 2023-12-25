@@ -16,11 +16,12 @@ const avatarWithStatusVariants = cva(
   }
 );
 
+export type AvatarStatus = "invited" | "declined" | "accepted";
+
 type AvatarWithStatusVariants = VariantProps<typeof avatarWithStatusVariants>;
 
 type AvatarWithStatusProps = React.PropsWithChildren<
-  AvatarWithStatusVariants &
-    AvatarProps & { status: "invited" | "declined" | "accepeted" }
+  AvatarWithStatusVariants & AvatarProps & { status: AvatarStatus }
 >;
 
 const STATUS_ICON_MAP: Record<

@@ -2,6 +2,8 @@ import { Link, Outlet } from "react-router-dom";
 import Footer from "../components/Footer/Footer";
 import Header from "../components/Header/Header";
 import Checkbox from "../components/Checkbox/Checkbox";
+import InviteCard from "../components/InviteCard/InviteCard";
+import AvatarWithStatus from "../components/Avatar/AvatarWithStatus";
 
 export default function Dashboard() {
   return (
@@ -15,7 +17,18 @@ export default function Dashboard() {
             alt="Secret Santa"
           />
         </Link>
-        <Checkbox>Send out a remainder before event</Checkbox>
+        {/* <Checkbox>Send out a remainder before event</Checkbox> */}
+        <InviteCard
+          name="Alan Ibarra"
+          email="alanjibarradev@gmail.com"
+          isCloseShowing={true}
+        >
+          <AvatarWithStatus
+            status="invited"
+            src="/avatars/avatar-01.png"
+            size={"md"}
+          />
+        </InviteCard>
         {/* <Outlet /> */}
       </main>
       <Footer />
