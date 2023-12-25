@@ -1,6 +1,7 @@
 import Input from "../Input/Input";
 
 export default function Login() {
+  console.log("test");
   return (
     <>
       <form className="space-y-4 mb-3" onSubmit={(e) => e.preventDefault()}>

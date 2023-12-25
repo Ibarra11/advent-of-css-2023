@@ -4,25 +4,45 @@ import "./index.css";
 import "virtual:svg-icons-register";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Login from "./components/Login/Login.tsx";
-import AuthLayout from "./layouts/Auth.tsx";
+import FullLayout from "./layouts/FullLayout.tsx";
 import Dashboard from "./layouts/Dashboard.tsx";
+import Invitation from "./components/Invitation/Invitation.tsx";
+import InvitationAcception from "./components/Invitation/InvitationAcception.tsx";
 
 const router = createBrowserRouter([
   {
-    element: <AuthLayout />,
+    path: "/auth",
+    element: <FullLayout />,
     children: [
       {
-        path: "/auth/login",
+        path: "login",
         id: "login",
         element: <Login />,
       },
       {
-        path: "/auth/signup",
+        path: "signup",
         id: "sign up",
         element: <Login />,
       },
     ],
   },
+  {
+    path: "/invitation",
+    element: <FullLayout />,
+    children: [
+      {
+        index: true,
+        element: (
+          <Invitation event="Alans Christmas" date="December 23, 2023" />
+        ),
+      },
+      {
+        path: "/invitation/accepted",
+        element: <InvitationAcception />,
+      },
+    ],
+  },
+
   {
     path: "/",
     element: <Dashboard />,
