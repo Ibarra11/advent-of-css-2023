@@ -5,7 +5,7 @@ import Checkbox from "../components/Checkbox/Checkbox";
 import InviteCard from "../components/InviteCard/InviteCard";
 import AvatarWithStatus from "../components/Avatar/AvatarWithStatus";
 import InviteForm from "../components/InviteForm/InviteForm";
-import FriendList from "../components/FriendList/FriendList";
+import FriendList from "../components/InviteGroup/InviteGroup";
 
 export default function Dashboard() {
   return (

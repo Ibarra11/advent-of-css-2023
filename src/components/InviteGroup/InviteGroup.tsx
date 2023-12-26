@@ -8,7 +8,7 @@ interface Friend {
   avatarSrc: string;
 }
 
-export default function FriendList({ friends }: { friends: Friend[] }) {
+export default function InviteGroup({ friends }: { friends: Friend[] }) {
   return (
     <div className="grid grid-cols-2 gap-y-8  [&>:nth-child(even)]:justify-self-end">
       {friends.map(({ name, email, status, avatarSrc }) => (
