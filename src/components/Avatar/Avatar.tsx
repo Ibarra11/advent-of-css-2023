@@ -32,6 +32,7 @@ export const Avatar: React.FC<React.PropsWithChildren<AvatarProps>> = ({
   children,
   alt = "User Avatar",
 }) => {
+  size;
   return (
     <div className={avatarContianerVariants({ size })}>
       <img

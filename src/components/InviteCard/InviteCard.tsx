@@ -10,7 +10,7 @@ export default function InviteCard({
   isCloseShowing: boolean;
 }>) {
   return (
-    <div className="relative bg-white max-w-[400px] w-full h-24 flex items-center pl-[72px] pr-4">
+    <div className="relative bg-white  w-full h-24 flex items-center pl-[72px] pr-4">
       <div className="text-black">
         <h2 className="font-sans font-bold text-3xl">{name}</h2>
         <p className="font-sans text-base">{email}</p>

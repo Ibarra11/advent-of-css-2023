@@ -6,6 +6,7 @@ import InviteCard from "../components/InviteCard/InviteCard";
 import AvatarWithStatus from "../components/Avatar/AvatarWithStatus";
 import InviteForm from "../components/InviteForm/InviteForm";
 import FriendList from "../components/InviteGroup/InviteGroup";
+import SecretSantaModal from "../components/Modal/Modal";
 
 export default function Dashboard() {
   return (
@@ -19,9 +20,25 @@ export default function Dashboard() {
             alt="Secret Santa"
           />
         </Link>
+        <SecretSantaModal
+          title="Are you sure you want to remove this?"
+          status={"accepted"}
+        >
+          <InviteCard
+            name="ALan Ibarra"
+            email="alanjibarradev@gmail.com"
+            isCloseShowing={false}
+          >
+            <AvatarWithStatus
+              status="accepted"
+              src="/avatars/avatar-01.png"
+              size={"md"}
+            />
+          </InviteCard>
+        </SecretSantaModal>
         {/* <Checkbox>Send out a remainder before event</Checkbox> */}
         <div className="flex justify-center flex-1 w-full ">
-          <div className="max-w-4xl w-full  space-y-14">
+          {/* <div className="max-w-4xl w-full  space-y-14">
             <InviteForm />
             <FriendList
               friends={new Array(8).fill({
@@ -31,7 +48,7 @@ export default function Dashboard() {
                 avatarSrc: "/avatars/avatar-01.png",
               })}
             />
-          </div>
+          </div> */}
         </div>
         {/* <Outlet /> */}
       </main>
